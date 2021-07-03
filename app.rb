@@ -10,8 +10,7 @@ erb :create_puppy
 end
 
 post '/puppy' do
-  p1=Puppy.new
-  @puppy= p1.inparams[:name, :breed,:age]
+  @puppy= Puppy.new(params['name'],params['breed'],params['age'])
  
   erb :display_puppy
 end
